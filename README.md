@@ -1,6 +1,7 @@
 ## Cosmos Hub reinvestment script for rewards
 
 Courtesy of [Validator🌐Network](https://validator.network).
+
 Adjusted for bitsong by Thamar
 
 The provided script enable delegators to claim all their staking rewards and reinvest them, to receive compounded interest. In addition to this, it supports withdrawal of validator commission.
