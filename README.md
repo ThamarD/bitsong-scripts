@@ -13,8 +13,8 @@ Not sure about this [Thamar] Requirement is to run a local full node as the scri
 
 First download the script and make it executable:
 ```
-curl -O https://raw.githubusercontent.com/block-finance/cosmoshub-scripts/master/cosmoshub-reinvest-rewards.sh
-chmod +x cosmoshub-reinvest-rewards.sh
+curl -O https://raw.githubusercontent.com/ThamarD/cosmoshub-scripts/master/bitsong-reinvest-rewards.sh
+chmod +x bitsong-reinvest-rewards.sh
 ```
 
 ### Enjoy the show
