@@ -1,4 +1,4 @@
-## Bitsong reinvestment script for rewards
+## Bitsong reinvestment script for rewards and commission
 
 Adjusted for Bitsong by Thamar
 Courtesy of Validator Network
