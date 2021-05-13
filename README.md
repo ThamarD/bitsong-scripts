@@ -1,10 +1,10 @@
-## Cosmos Hub reinvestment script for rewards
+## Bitsong reinvestment script for rewards
 
-Courtesy of [Validator🌐Network](https://validator.network).
+Adjusted for Bitsong by Thamar
+Courtesy of Validator Network
 
-Adjusted for bitsong by Thamar
 
-The provided script enable delegators to claim all their staking rewards and reinvest them, to receive compounded interest. In addition to this, it supports withdrawal of validator commission.
+The provided script enable Validators and delegators to claim their staking rewards and reinvest them, to receive compounded interest. In addition to this, it supports withdrawal of validator commission.
 
 Not sure about this [Thamar] Requirement is to run a local full node as the script defaults to using the https://localhost:443 RPC endpoint.
 
@@ -17,7 +17,7 @@ curl -O https://raw.githubusercontent.com/ThamarD/cosmoshub-scripts/master/bitso
 chmod +x bitsong-reinvest-rewards.sh
 ```
 
-### Enjoy the show
+### Operating
 
 The script has some default settings and only requires you to provide the name for the account you wish to work with.
 
