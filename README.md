@@ -1,3 +1,4 @@
+## NOT READY YET!!
 ## Bitsong reinvestment script for rewards and commission
 
 Adjusted for Bitsong by Thamar
