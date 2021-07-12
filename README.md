@@ -6,7 +6,7 @@ Courtesy of Validator Network
 
 The provided script enable Validators and delegators to claim their staking rewards and reinvest them, to receive compounded interest. In addition to this, it supports withdrawal of validator commission.
 
-Requirement is to run a local full node as the script defaults to using the https://localhost:443 RPC endpoint.
+You can run a local full node, the the script defaults to using the https://localhost:26657 RPC endpoint, or you can change the ```NODE``` parameter in the script with an external node that you trust.
 
 
 ### Installation
@@ -76,4 +76,4 @@ You can run this script as much as you like, I let it run once a day. You can co
 
 ```0 18 * * * * /bin/bash ~/bitsong-reinvest-rewards.sh my_wallet >mywithdraw.log 2>&1```
 
-I only fill in the ```KEYRING_PASSPHRASE``` and ```VALIDATOR``` and in the crontab line ```my_wallet```
+I only fill in the ```KEYRING_PASSPHRASE``` and ```VALIDATOR``` in the user settings in the script and in the crontab line change the ```my_wallet``` into the correct wallet name.
