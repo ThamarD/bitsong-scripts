@@ -35,17 +35,21 @@ and expect output such as:
 Account: thamar_wallet (local)
 Address: bitsong1d9mue6sxrxgcd8rz6cdmeamw4cey3c24smrcc0
 ======================================================
-Account balance:      9.85 - 9854455ubtsg
-Available rewards:    2.80 - 2801537ubtsg
-Available commission: 4.02 - 4028064ubtsg
-Available rew+commis: 6.82 - 6829601ubtsg
-Net balance:          16.68 - 16684056ubtsg
+Account balance:      9.85 - 9854434ubtsg
+Available rewards:    18.38 - 18383546ubtsg
+Available commission: 26.44 - 26449475ubtsg
+Available rew+commis: 44.83 - 44833021ubtsg
+Net balance:          54.68 - 54687455ubtsg
 Reservation:          10.00 - 10000000ubtsg
 
-Nothing to delegate.
-```
+You are about to delegate 44687455ubtsg to bitsongvaloper1d9mue6sxrxgcd8rz6cdmeamw4cey3c243ll3gj:
+  Moniker: thamar
+  Details:
 
-No rewards and commission are delegation because parameters are not met.
+Withdrawing rewards ... Account sequence: 283
+    echo Signing Flags:
+gas estimate: 139189
+```
 
 
 ### Customize settings (optional)
