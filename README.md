@@ -6,7 +6,7 @@ Courtesy of Validator Network
 
 The provided script enable Validators and delegators to claim their staking rewards and reinvest them, to receive compounded interest. In addition to this, it supports withdrawal of validator commission.
 
-You can run a local full node, the the script defaults to using the https://localhost:26657 RPC endpoint, or you can change the ```NODE``` parameter in the script with an external node that you trust.
+You can run a local full node, the script default uses the https://localhost:26657 RPC endpoint, or you can change the ```NODE``` parameter in the script with an external node that you trust.
 
 
 ### Installation
