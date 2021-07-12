@@ -25,7 +25,7 @@ The name must match the output of the NAME: column of `bitsongcli keys list`:
 
 You can now run the script:
 ```
-./bitsong-reinvest-rewards.sh testkey1
+./bitsong-reinvest-rewards.sh thamar_wallet
 ```
 
 and expect output such as:
