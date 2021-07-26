@@ -10,18 +10,39 @@ You can run a local full node, the script default uses the https://localhost:266
 
 
 ### Installation
-
-First download the script and make it executable:
+Login to the environment where your bitsong node is installed/running.
+Download the script and make it executable:
 ```
 curl -O https://raw.githubusercontent.com/ThamarD/cosmoshub-scripts/master/bitsong-reinvest-rewards.sh
 chmod +x bitsong-reinvest-rewards.sh
 ```
 
+### Customize settings (optional)
+Use a text editor e.g. nano to fill in your KeyRing Passphrase and change the Validator you want to delegate the reinvestment to. Besides these, you can change some of the default settings of the script like Reservation Amount and Minimum delegation amount to suit your desires.
+
+```
+##############################################################################
+# User settings.
+##############################################################################
+
+KEY=""                                  # This is the key you wish to use for signing transactions, listed in first column of "bitsongcli keys list".
+KEYRING_PASSPHRASE=""                   # Fill in your KeyRing Passphrase to run the script periodically via cron. Becarefull, know what you are doing!
+DENOM="ubtsg"                           # Coin denominator is ubtsg ("micro-btsg"). 1 btsg = 1000000 ubtsg.
+MINIMUM_DELEGATION_AMOUNT="25000000"    # Only perform delegations above this amount of ubtsg. Default: 25btsg.
+RESERVATION_AMOUNT="10000000"           # Keep this amount of ubtsg in account. Default: 10btsg.
+VALIDATOR="bitsongvaloper1d9mue6sxrxgcd8rz6cdmeamw4cey3c243ll3gj"        # Reinvest and vote for this Validator; Default is validator Thamar. Thank you for your support :-); but hey, you should change this ...
+
+##############################################################################
+```
+
+Take care to specify the `RESERVATION_AMOUNT` which is the minimum amount of ubtsg that will remain available in your account. I use 10btsg as a minimum.
+You can delegate to any validator you prefer by changing `VALIDATOR` variable.
+Remember, filling in your Keyring Passphrase in this script creates a certain degree of security risk! Make sure your node is secure!
+
 ### Operating
 
-The script has some default settings and only requires you to provide the name for the account you wish to work with.
-
-The name must match the output of the NAME: column of `bitsongcli keys list`:  
+The script requires you to provide the name for the account you wish to work with.
+The name must match the output of the "- name" line of `bitsongcli keys list`. In my case the output is `- name: thamar_wallet`.
 
 You can now run the script:
 ```
@@ -50,28 +71,6 @@ Withdrawing rewards ... Account sequence: 283
     echo Signing Flags:
 gas estimate: 139189
 ```
-
-
-### Customize settings (optional)
-Use a text editor e.g. nano to change some of the default settings of the script.
-
-```
-##############################################################################
-# User settings.
-##############################################################################
-
-KEY=""                                  # This is the key you wish to use for signing transactions, listed in first column of "bitsongcli keys list".
-KEYRING_PASSPHRASE=""                   # Only populate if you want to run the script periodically. This is UNSAFE and should only be done if you know what you are doing.
-DENOM="ubtsg"                           # Coin denominator is ubtsg ("micro-btsg"). 1 btsg = 1000000 ubtsg.
-MINIMUM_DELEGATION_AMOUNT="25000000"    # Only perform delegations above this amount of ubtsg. Default: 25btsg.
-RESERVATION_AMOUNT="10000000"           # Keep this amount of ubtsg in account. Default: 10btsg.
-VALIDATOR="bitsongvaloper1d9mue6sxrxgcd8rz6cdmeamw4cey3c243ll3gj"        # Reinvest and vote for this Validator; Default is validator THAMAR. Thank you for your support :-); but hey, you should change this ...
-
-##############################################################################
-```
-
-Take care to specify the `RESERVATION_AMOUNT` which is the minimum amount of ubtsg that will remain available in your account.
-You can delegate to any validator you prefer by changing `VALIDATOR` variable.
 
 ### Run script periodically (optional)
 You can run this script as much as you like, I let it run once a day. You can configure a crontab like this
