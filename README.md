@@ -1,8 +1,10 @@
 ## Bitsong reinvestment script for rewards and commission
 
 Created for Bitsong by Thamar
+
 Courtesy of Validator Network
 
+This script comes without warranties of any kind. Use at your own risk.
 
 The provided script enable Validators and delegators to claim their staking rewards and reinvest them, to receive compounded interest. In addition to this, it supports withdrawal of validator commission.
 
@@ -18,7 +20,7 @@ chmod +x bitsong-reinvest-rewards.sh
 ```
 
 ### Customize settings (optional)
-Use a text editor e.g. nano to fill in your KeyRing Passphrase and change the Validator you want to delegate the reinvestment to. Besides these, you can change some of the default settings of the script like Reservation Amount and Minimum delegation amount to suit your desires.
+Use a text editor e.g. nano to fill in your KeyRing Passphrase `KEYRING_PASSPHRASE` and change the Validator `VALIDATOR` you want to delegate the reinvestment to. Besides these, you can change some of the default settings of the script like Reservation Amount and Minimum delegation amount to suit your desires.
 
 ```
 ##############################################################################
@@ -36,8 +38,10 @@ VALIDATOR="bitsongvaloper1d9mue6sxrxgcd8rz6cdmeamw4cey3c243ll3gj"        # Reinv
 ```
 
 Take care to specify the `RESERVATION_AMOUNT` which is the minimum amount of ubtsg that will remain available in your account. I use 10btsg as a minimum.
+
 You can delegate to any validator you prefer by changing `VALIDATOR` variable.
-Remember, filling in your Keyring Passphrase in this script creates a certain degree of security risk! Make sure your node is secure!
+
+Remember!!, filling in your Keyring Passphrase in this script creates a certain degree of security risk! Make sure your node is secure!
 
 ### Operating
 
@@ -80,5 +84,6 @@ You can run this script as much as you like, I let it run once a day. You can co
 ```0 18 * * * /bin/bash ~/bitsong-reinvest-rewards.sh my_wallet > mywithdraw.log 2>&1```
 
 Daily at 1800h, the script runs. I only fill in the ```KEYRING_PASSPHRASE``` and ```VALIDATOR``` in the user settings in the script and in the crontab line change the ```my_wallet``` into the correct wallet name. You can chek the mywithdraw.log if all is running smooth, or not.
+
 
 Good Luck!
