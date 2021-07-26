@@ -18,7 +18,7 @@
 ##############################################################################################################################################################
 
 KEY=""                                  # This is the key you wish to use for signing transactions, listed in first column of "bitsongcli keys list".
-KEYRING_PASSPHRASE=""     # Only populate if you want to run the script periodically. This is UNSAFE and should only be done if you know what you are doing.
+KEYRING_PASSPHRASE=""                   # Fill in your KeyRing Passphrase to run the script periodically via cron. Becarefull, know what you are doing!
 DENOM="ubtsg"                           # Coin denominator is ubtsg ("micro-btsg"). 1 btsg = 1000000 ubtsg.
 MINIMUM_DELEGATION_AMOUNT="25000000"    # Only perform delegations above this amount of ubtsg. Default: 25btsg.
 RESERVATION_AMOUNT="10000000"           # Keep this amount of ubtsg in account. Default: 10btsg.(Was 100btsg)
@@ -49,15 +49,11 @@ then
   echo "  Chain-ID: ${CHAIN_ID}"
 fi
 
-echo "Script step 2 - Key entered?"
-
 # Use first command line argument in case KEY is not defined.
 if [ -z "${KEY}" ] && [ ! -z "${1}" ]
 then
   KEY=${1}
 fi
-
-echo "Script step 3 - Get information about key"
 
 # Get information about key
 KEY_STATUS=$(echo ${KEYRING_PASSPHRASE} | ~/go/bin/bitsongcli keys show ${KEY} --output json)
@@ -67,9 +63,9 @@ then
     SIGNING_FLAGS="--ledger"
 fi
 
-echo "Script step 4 - Get current account balance"
 
 # Get current account balance.
+echo "Script - Get current account balance"
 ACCOUNT_ADDRESS=$(echo ${KEY_STATUS} | jq -r ".address")
 ACCOUNT_STATUS=$( ~/go/bin/bitsongcli query account ${ACCOUNT_ADDRESS} --chain-id ${CHAIN_ID} --output json)
 ACCOUNT_SEQUENCE=$(echo ${ACCOUNT_STATUS} | jq -r ".value.sequence")
