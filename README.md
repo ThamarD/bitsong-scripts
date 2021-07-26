@@ -77,7 +77,7 @@ You can run this script as much as you like, I let it run once a day. You can co
 
 ```crontab -e```
 
-```0 18 * * * * /bin/bash ~/bitsong-reinvest-rewards.sh my_wallet >mywithdraw.log 2>&1```
+```0 18 * * * /bin/bash ~/bitsong-reinvest-rewards.sh my_wallet > mywithdraw.log 2>&1```
 
 Daily at 1800h, the script runs. I only fill in the ```KEYRING_PASSPHRASE``` and ```VALIDATOR``` in the user settings in the script and in the crontab line change the ```my_wallet``` into the correct wallet name. You can chek the mywithdraw.log if all is running smooth, or not.
 
