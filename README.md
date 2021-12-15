@@ -56,24 +56,25 @@ You can now run the script:
 and expect output such as:
 
 ```
-======================================================
-Account: thamar_wallet (local)
-Address: bitsong1d9mue6sxrxgcd8rz6cdmeamw4cey3c24smrcc0
-======================================================
-Account balance:      9.85 - 9854434ubtsg
-Available rewards:    18.38 - 18383546ubtsg
-Available commission: 26.44 - 26449475ubtsg
-Available rew+commis: 44.83 - 44833021ubtsg
-Net balance:          54.68 - 54687455ubtsg
-Reservation:          10.00 - 10000000ubtsg
+Reinvestment script for rewards and commission starts...
 
-You are about to delegate 44687455ubtsg to bitsongvaloper1d9mue6sxrxgcd8rz6cdmeamw4cey3c243ll3gj:
-  Moniker: thamar
-  Details:
+======================================================
+Account:                thamar_wallet (local)
+Chain-ID:               bitsong-2b
+Account Address:        bitsong1d9mue6sxrxgcd8rz6cdmeamw4cey3c24smrcc0
+Validator Address:      bitsongvaloper1d9mue6sxrxgcd8rz6cdmeamw4cey3c243ll3gj
+Minimum Re-invest Amm.: 25000000 ubtsg
+======================================================
+Account Balance:        9.85 (9856560 ubtsg)
+Available Rewards:      .19 (197101 ubtsg)
+Available Commission:   .27 (279594 ubtsg)
+Tot Avail Bal+Rew+Com:  10.33 (10333255 ubtsg)
 
-Withdrawing rewards ... Account sequence: 283
-    echo Signing Flags:
-gas estimate: 139189
+Reservation Balance:    10.00 (10000000 ubtsg)
+======================================================
+Re-invest Ammount:      10.33 - 10.00 = 0
+
+Nothing to delegate.
 ```
 
 ### Run script periodically (optional)
